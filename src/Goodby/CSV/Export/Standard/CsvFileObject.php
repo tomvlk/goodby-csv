@@ -47,7 +47,7 @@ class CsvFileObject extends SplFileObject
      * @param useless  $escape  THIS PARAM IS UNSED, BUT REQUIRED EXISTS, see https://bugs.php.net/bug.php?id=68479 and https://github.com/goodby/csv/issues/56
      * @return int|void
      */
-    public function fputcsv($fields, $delimiter = null, $enclosure = null, $escape = null)
+    public function fputcsv(array $fields, $separator = null, $enclosure = null, $escape = null, $eol = PHP_EOL)
     {
         // Temporary output a line to memory to get line as string
         $fp = fopen('php://temp', 'w+');
